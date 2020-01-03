@@ -49,16 +49,24 @@ module.exports = {
     // If the `treatments` object is missing a treatment named _standard_
     // will be created automatically, and will contain all variables.
 
-    treatments: {
+   treatments: {
 
-        standard: {
-            description: "Longer time",
-            bidTime: 30000
+        sad: {
+            Name: 'Sad',
+            description: "Felt sad",
+            questionFeeling: 'sad'
         },
 
-        pressure: {
-            description: "Short times to take decisions",
-            bidTime: 10000
+        angry: {
+            Name: 'Angry',
+            description: "Felt angry",
+            questionFeeling: 'angry'
+        },
+
+        fear: {
+            Name: 'Fear',
+            description: "Felt scared",
+            questionFeeling: 'fear'
         }
 
     }
