@@ -309,6 +309,24 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
 	 //});		
 
 	
+	stager.extendStep('writing', { 
+		widget: {
+        name: 'Feedback',
+        root: 'container',
+        options: {
+          className: 'centered',
+          mainText: 'Can you recall the moment where you felt ' + settings.questionFeeling + '? Please write about the situation in as much detail as you can.',
+          minChars: 100,
+          minWords: 5,
+          requiredChoice: true,
+          showSubmit: false,
+          panel: false,
+          title: false,
+        }
+      }
+    });
+	
+	
 	stager.extendStep('game', {
         donebutton: false,
         frame: 'game.htm',
