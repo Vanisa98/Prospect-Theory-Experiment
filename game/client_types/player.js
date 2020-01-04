@@ -309,6 +309,36 @@ module.exports = function(treatmentName, settings, stager, setup, gameRoom) {
 	 //});		
 
 	
+//Mood survey alternative?// 
+	    stager.extendStep('mood1', {
+      widget: {
+          name: 'ChoiceManager',
+          root: 'container',
+          options: {
+              className: 'centered',
+              mainText: 'Answer the following question with the appropriate answers.',
+              forms: [
+                  {
+                      name:'ChoiceTableGroup',
+                      id: 'mood1score',
+                      mainText: 'In general, to what extent do you experience these feelings?',
+                      items: [
+                              'Enraged',
+                              'Sorrowful',
+                              'Afraid'
+                            ],
+                      choices: [1, 2, 3, 4, 5],
+                      requiredChoice: true,
+                      left: 'Always',
+                      right: 'Never',
+                      orientation: 'H',
+          }],
+        }},
+      });
+
+	
+	
+	
 	stager.extendStep('writing', { 
 		widget: {
         name: 'Feedback',
